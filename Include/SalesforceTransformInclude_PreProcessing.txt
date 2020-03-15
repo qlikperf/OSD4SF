@@ -1,0 +1,10 @@
+//****************************************************************************************************************
+//	This is an example of an externalized include file.
+//****************************************************************************************************************
+Trace Entering Include File: $(vApp)$(vPurpose)Include_PreProcessing.txt;
+// Add script here as required.
+
+// The OSD4SF Transform rules, specifically those for Cases, require Extract variables:
+call Load_Variables_from_XLS('$(vVariablePath)$(vApp)_Extract_Variables.xls', 'Sheet1', 'KEEP') ;
+
+Trace Exiting Include File: $(vApp)$(vPurpose)Include_PreProcessing.txt;

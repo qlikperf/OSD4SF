@@ -1,0 +1,28 @@
+//****************************************************************************************************************
+//	This is an example of an externalized include file.
+//****************************************************************************************************************
+Trace Entering Include File: $(vApp)$(vPurpose)Include_PostProcessing.txt;
+
+Link:
+LOAD Distinct
+	*,
+	subField([%LinkKey], '|', 1)	AS [Account Id],
+	date#(subField([%LinkKey], '|', 2), 'MM/DD/YYYY')	AS Date
+	,
+	subField([%LinkKey], '|', 3)	AS [%LinkKeySource]
+,
+;
+LOAD
+	FieldValue('%LinkKey', RecNo()) 					AS [%LinkKey]
+AUTOGENERATE FieldValueCount('%LinkKey')
+;
+
+// Autonumber %LinkKey; //, AccountId;
+
+DROP TABLES CasesOpened, CasesClosed, Opportunities, Timecards, PricebookEntry, OppLineItems;
+
+STORE Link INTO [$(vQVDPath)\Transformed\Link.qvd] (qvd);
+
+DROP Table Link;
+
+Trace Exiting Include File: $(vApp)$(vPurpose)Include_PosyProcessing.txt;

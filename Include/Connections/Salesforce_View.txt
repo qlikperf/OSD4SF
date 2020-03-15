@@ -1,0 +1,1 @@
+CUSTOM CONNECT TO "Provider=QvSalesforceConnector.exe;mode=BULK;timeout=100;batchSize=500;plainQueriesOnly=true;pkChunking=false;chunkSize=100000;threadCount=2;ProxyAuthentication=0;XUserId=REDACTED;XPassword=REDACTED;";

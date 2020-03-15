@@ -1,0 +1,16 @@
+# Always used Windows-style line endings for text files (Carriage Return followed by Line Feed)
+* text eol=crlf
+*.txt text
+*.qvs text
+*.text text
+# Denote all files that are truly binary and should not be modified.
+*.png binary
+*.jpg binary
+*.pdf binary
+*.qvw binary
+*.qvf binary
+*.xls binary
+*.xlsx binary
+*.qvd binary
+*.mdb binary
+*.csv binary

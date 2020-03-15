@@ -1,0 +1,37 @@
+//****************************************************************************************************************
+//	This is an example of an externalized include file.
+//****************************************************************************************************************
+Trace Entering Include File: $(vApp)$(vPurpose)Include_PostProcessing.txt;
+
+// Add script here as required.
+
+DisplayedCurrency:		// always load this so we don't lose the "always one selected" property
+LOAD DISTINCT
+    "Displayed Currency"
+FROM [$(vQVDPath)/Transformed/CurrencyTypes.qvd]
+(qvd);
+
+
+
+SET vNumberOfSelectableDimensions=4;
+SET vNumberOfSelectableMeasures=3;
+$(must_Include=[$(vCommonScriptPath)\Load AdHoc Dimensions And Measures.qvs])
+
+NCR_DimensionLimiter:
+LOAD * INLINE [
+%NCR_DimensionLimiter
+1
+2
+3
+4
+];
+
+NCR_MeasureLimiter:
+LOAD * INLINE [
+%NCR_MeasureLimiter
+1
+2
+3
+];
+
+Trace Exiting Include File: $(vApp)$(vPurpose)Include_PostProcessing.txt;

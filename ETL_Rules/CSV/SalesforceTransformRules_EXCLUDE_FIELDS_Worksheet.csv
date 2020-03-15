@@ -1,0 +1,3 @@
+﻿Comment,Target,Field,ENABLED
+Sample Rule,Products,UnitPrice,Y
+Sample Rule,Orders,ShipperID,Y

@@ -1,0 +1,1 @@
+This folder will contain QVDs created by the QVD ExtraQtor.

@@ -1,0 +1,27 @@
+﻿Sort Order,Comment,Target Folder,Target,Source Folder,Source,Source Type,External Source Format,Row Limit,Load Command,ENABLED,Stale After (Days),Fields,Constraints,Keep or Drop,Post Load Script
+1,Built-in Sales Object,$(vQVDPath)Transformed\,_MapContactIdToName,$(vQVDPath)Extracted\,ContactExtract,QVD,,,Mapping LOAD,Y,0.000,INCLUDE_SUBSET,,DROP,
+2,Built-in Sales Object,$(vQVDPath)Transformed\,_MapProjectIdToAccount,$(vQVDPath)Extracted\,ProjectExtract,QVD,,,Mapping LOAD,Y,0.000,INCLUDE_SUBSET,,DROP,
+3,Built-in Sales Object,$(vQVDPath)Transformed\,Opportunities,$(vQVDPath)Extracted\,OpportunityExtract,QVD,,,LOAD,Y,0.000,INCLUDE_SUBSET,"CloseDate >='$(vSalesforceMinExtractDate)'",KEEP,
+4,Built-in Product Object,$(vQVDPath)Transformed\,Opp Line Items,$(vQVDPath)Extracted\,OpportunityLineItemExtract,QVD,,,LEFT KEEP (Opportunities) LOAD,Y,0.000,INCLUDE_SUBSET,,KEEP,
+5,Built-in Product Object,$(vQVDPath)Transformed\,PricebookEntry,$(vQVDPath)Extracted\,PricebookEntryExtract,QVD,,,LEFT KEEP (OppLineItems) LOAD,Y,0.000,INCLUDE_SUBSET,,KEEP,
+6,Built-in Product Object,$(vQVDPath)Transformed\,Product2,$(vQVDPath)Extracted\,Product2Extract,QVD,,,LEFT KEEP (PricebookEntry) LOAD,Y,0.000,INCLUDE_SUBSET,,DROP,
+7,Built-in Support Object,$(vQVDPath)Transformed\,CasesClosed,$(vQVDPath)Extracted\,CaseExtract,QVD,,,NOCONCATENATE LOAD,Y,0.000,INCLUDE_SUBSET,"ClosedDate >='$(vSalesforceMinExtractDate)'",KEEP,
+8,Built-in Support Object,$(vQVDPath)Transformed\,CasesOpened,$(vQVDPath)Extracted\,CaseExtract,QVD,,,NOCONCATENATE LOAD,Y,0.000,INCLUDE_SUBSET,"CreatedDate >='$(vSalesforceMinExtractDate)'",KEEP,
+9,Built-in Sales Object,$(vQVDPath)Transformed\,Accounts,$(vQVDPath)Extracted\,AccountExtract,QVD,,,LOAD,Y,0.000,INCLUDE_SUBSET,,DROP,
+10,Built-in Sales Object,$(vQVDPath)Transformed\,Case Owners,$(vQVDPath)Extracted\,UserExtract,QVD,,,LOAD,Y,0.000,INCLUDE_SUBSET,,DROP,
+11,Built-in Sales Object,$(vQVDPath)Transformed\,Project Owners,$(vQVDPath)Extracted\,UserExtract,QVD,,,LOAD,Y,0.000,INCLUDE_SUBSET,,DROP,
+12,Built-in Sales Object,$(vQVDPath)Transformed\,Timecard Resources,$(vQVDPath)Extracted\,ContactExtract,QVD,,,LOAD,Y,0.000,INCLUDE_SUBSET,,DROP,
+13,Built-in Sales Object,$(vQVDPath)Transformed\,Opportunity Owners,$(vQVDPath)Extracted\,UserExtract,QVD,,,LOAD,Y,0.000,INCLUDE_SUBSET,,DROP,
+14,Built-in Sales Object,$(vQVDPath)Transformed\,Project Managers,$(vQVDPath)Extracted\,ContactExtract,QVD,,,LOAD,Y,0.000,INCLUDE_SUBSET,,DROP,
+15,Requires the optional FinancialForce PSA Module,$(vQVDPath)Transformed\,Timecards,$(vQVDPath)Extracted\,TimeCardExtract,QVD,,,LOAD DISTINCT,Y,0.000,INCLUDE_SUBSET,WHERE pse__Total_Hours__c <> 0 and pse__End_Date__c  <= $(vToday),KEEP,
+16,Requires the optional FinancialForce PSA Module,$(vQVDPath)Transformed\,Projects,$(vQVDPath)Extracted\,ProjectExtract,QVD,,,LOAD,Y,0.000,INCLUDE_SUBSET,,DROP,
+17,Currency Conversions,$(vQVDPath)Transformed\,CurrencyTypes,$(vQVDPath)Extracted\,CurrencyTypeExtract,QVD,,,LOAD,Y,0.000,INCLUDE_SUBSET,,DROP,"LEFT JOIN (CurrencyTypes) LOAD IsoCode as [Displayed Currency], ConversionRate as MultiplicandFromUSD_ToTarget from [$(vQVDPath)Extracted\CurrencyTypeExtract.qvd] (qvd);
+TmpCurrency:
+LOAD *, [Divisor to USD] /  MultiplicandFromUSD_ToTarget as [Currency Conversion Rate] Resident CurrencyTypes;
+DROP TABLE CurrencyTypes;
+Rename TABLE TmpCurrency to CurrencyTypes;
+RIGHT JOIN (CurrencyTypes) LOAD
+    ""Displayed Currency"", [Currency Symbol]
+FROM [lib://Salesforce/External Data/XLS/Displayed Currencies.xlsx]
+(ooxml, embedded labels, table is Sheet1);
+STORE CurrencyTypes INTO [$(vQVDPath)Transformed\CurrencyTypes.qvd] (qvd);"

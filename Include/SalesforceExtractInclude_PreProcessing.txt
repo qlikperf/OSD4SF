@@ -1,0 +1,13 @@
+//****************************************************************************************************************
+//	This is an example of an externalized include file.
+//****************************************************************************************************************
+Trace Entering Include File: $(vApp)$(vPurpose)Include_PostProcessing.txt;
+
+// Add script here as required.
+$(must_Include=$(vCommonScriptPath)createcalendartable.txt); 
+LET vMinDateNum = num ( vSalesForceMinExtractDate);	// Earliest date in calendar
+LET vMaxDateNum = num (vToday);				// Most recent date in calendar
+call CreateCalendarQvd('', 'DROP');			// Create Calendar.qvd and then keep the calendar in memory. 
+trace $(vQVDPath)\Extracted\Calendar.qvd successfully stored;
+
+Trace Exiting Include File: $(vApp)$(vPurpose)Include_PostProcessing.txt;

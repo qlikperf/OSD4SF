@@ -1,0 +1,3 @@
+﻿Comment,Target,Field,ENABLED
+Sample Rule,Shippers,ShipperID,Y
+Sample Rule,OrderDetails,LineNo,Y
