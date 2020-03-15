@@ -1,45 +1,38 @@
 
-# **__TSEEQ__** ("seek"), The Structured ETL Engine for Qlik
+# **__OSD4SF__**, The Open Source Dashboard for Salesforce
 
-## Latest Release == [4.0.5](https://github.com/qlikperf/TSEEQ/releases/latest)
+## Latest Release == [1.0.0](https://github.com/qlikperf/OSD4SF/releases/latest)
+
+## Description
+
+**Salesforce**, also known as **SFDC**, is a hosted (software as a service or **SAAS**) customer relationship management (**CRM**) package. Many QlikView and Qlik Sense customers build dashboards sourced from Salesforce data to support their business goal of Performance Management of Sales, Marketing and the Customer Success Organization (Benefits of the Open Source Dashboard for Salesforce
+
+Since default Salesforce objects (tables and fields) are the same across all Salesforce implementations, a single common set of Qlik assets can be used by all Qlik customers, for both QlikView and Qlik Sense, to source data from Saleforce for Sales, Marketing and CSO dashboards.
+
+As such, we have created and posted a common set of Qlik assets as an open source project on Qlik Branch and GitHub for free use by Qlik customers. The resulting Open Source Dashboard for SalesForce (“**OSD4SF”** or “**OSD** for **SF”**) is not a demo, template or accelerator. Rather, this  is a ***ready-to-deploy*** SalesForce dashboard, including ETL and UI components, implemented as a set of QVFs for Qlik Sense and a set of QVWs for QlikView. 
+
+
+![TSEEQ](https://github.com/qlikperf/OSD4SF/blob/master/img/OSD_for_SF.png.png) 
+
+
 
 ## Documentation
-Please see the **__TSEEQ__** **[documentation](https://github.com/qlikperf/TSEEQ/blob/master/TSEEQ%20Documentation.pdf)** for step-by-step instructions for installation and configuration.
+
+Please see the **__OSD4SF__** **documentation** for step-by-step instructions for installation and configuration.
 
 ## Minimum Requirements:
-QlikView (v11 or 12); OR Qlik Sense 2.1 or higher (including all releases named after dates, for example, the "June 2017" and later releases).  **__TSEEQ__** works with both Desktop and Server product variants.
+QlikView (v11 or 12); OR Qlik Sense 2.1 or higher (including all releases named after dates, for example, the "June 2017" and later releases).  **__OSDSF__** works with both Desktop and Server product variants.
 
 ## Install
-To install **__TSEEQ__**, first download the **[Source code (zip) file for the newest release](https://github.com/qlikperf/TSEEQ/releases)**. After you download the file, please check **Unblock** in the file properties and then click **OK**.
+To install **__OSD4SF__**, first download the **[Source code (zip) file for the newest release](https://github.com/qlikperf/TSEEQ/releases)**. After you download the file, please check **Unblock** in the file properties and then click **OK**.
 
 ![Unblock](https://github.com/qlikperf/TSEEQ/blob/master/img/unblock_zip_file.png) 
 
-After unblocking the ZIP file, please follow the Instructions for the **__TSEEQ Sales Sample__** on page 5 of the  **[documentation](https://github.com/qlikperf/TSEEQ/blob/master/TSEEQ%20Documentation.pdf)**. 
+After unblocking the ZIP file, please follow the Instructions for the  on page 5 of the  **[documentation](https://github.com/qlikperf/TSEEQ/blob/master/TSEEQ%20Documentation.pdf)**. 
 
 This documentation is also contained as a PDF in the **[Source code (zip) file for the newest release](https://github.com/qlikperf/TSEEQ/releases)**.
-
-
-## Description
-**__TSEEQ__** implements centralized management of Extract, Transform and Load (ETL) operations that provide data to QlikView and Qlik Sense applications. 
- 
-Primary benefits of **__TSEEQ__** are: 
-
-* Governance:     ETL operations are defined in externalized (and therefore readily manageable) rule sets.
-* Self-Service:   Business users may easily define and modify ETL operations in sandbox environments.
-* Performance:    A profiler enables efficient ETL execution.
-* Productivity:   A common code base promotes reuse and streamlines ETL development.
-
-
-![TSEEQ](https://github.com/qlikperf/TSEEQ/blob/master/img/SEEQ_basic_flow.png) 
-
-## **__TSEEQ__** In Comparison to Traditional Embedded Scripting
-The distinguishing characteristic of **__TSEEQ__** versus Traditional Embedding Scripting (**TES**) is that in **__TSEEQ__**, externalized rules (diagram above) provides a structured source of ETL control; in **TES**, free-form textual ETL script is embedded within Qlik application files (QVWs in QlikView and QVFs in Qlik Sense). We can conceptualize **TES** as shown in the diagram below:
-
-![TES](https://github.com/qlikperf/TSEEQ/blob/master/img/SEEQ_vs_TES.png) 
-
-Note: **__TSEEQ__** and TES are not mutually exclusive; a hybrid approach is useful in many cases. 
 
 ## License
 **[MIT](https://github.com/qlikperf/TSEEQ/blob/master/LICENSE)**
 
-If you experience an issue, do not contact Qlik Support.  Please open an issue here: **[Issues](https://github.com/qlikperf/TSEEQ/issues)**
+If you experience an issue, do not contact Qlik Support.  Please open an issue here: **[Issues](https://github.com/qlikperf/OSD4SF/issues)**
