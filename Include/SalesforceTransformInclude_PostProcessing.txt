@@ -19,7 +19,13 @@ AUTOGENERATE FieldValueCount('%LinkKey')
 
 // Autonumber %LinkKey; //, AccountId;
 
-DROP TABLES CasesOpened, CasesClosed, Opportunities, Timecards, PricebookEntry, OppLineItems;
+DROP TABLES CasesOpened, CasesClosed, Opportunities, PricebookEntry, OppLineItems;
+
+LET vNumTimecards = NoOfRows('Timecards');
+IF vNumTimecards > 0 then
+	Drop Table Timecards;
+End If   
+
 
 STORE Link INTO [$(vQVDPath)\Transformed\Link.qvd] (qvd);
 
