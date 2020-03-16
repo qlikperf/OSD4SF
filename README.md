@@ -24,7 +24,7 @@ QlikView (v11 or 12); OR Qlik Sense 2.1 or higher (including all releases named 
 ## Install
 To install the **__OSD4SF__**, first download the **[Source code (zip) file for the newest release](https://github.com/qlikperf/OSD4SF/releases)**. After you download the file, please check **Unblock** in the file properties and then click **OK**.
 
-![Unblock](https://github.com/qlikperf/OSD4SF/blob/master/img/unblock_zip_file.png) 
+![Unblock](https://github.com/qlikperf/OSD4SF/blob/master/img/osd4sf_unblock_zip.png) 
 
 After unblocking the ZIP file, please follow the Instructions for the  on page 4 of the  **[documentation](https://github.com/qlikperf/OSD4SF/blob/master/Open%20Source%20Dashboard%20for%20Salesforce%20Documentation.pdf)**. 
 
