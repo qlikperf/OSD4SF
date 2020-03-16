@@ -1,11 +1,11 @@
 
-# **__OSD4SF__**, The Open Source Dashboard for Salesforce
+# **__OSD4SF__**: The Open Source Dashboard for Salesforce
 
 ## Latest Release == [1.0.1](https://github.com/qlikperf/OSD4SF/releases/latest)
 
 ## Description
 
-**Salesforce**, also known as **SFDC**, is a hosted (software as a service or **SAAS**) customer relationship management (**CRM**) package. Many QlikView and Qlik Sense customers build dashboards sourced from Salesforce data to support their business goal of Performance Management of Sales, Marketing and the Customer Success Organizations.
+**Salesforce**, also known as **SFDC**, is a hosted (software as a service or **SAAS**) customer relationship management (**CRM**) package. Many QlikView and Qlik Sense customers build dashboards sourced from Salesforce data to support their business goal of Performance Management of Sales, Marketing and the Customer Success Organization (CSO).
 
 Since default Salesforce objects (tables and fields) are the same across all Salesforce implementations, a single common set of Qlik assets can be used by all Qlik customers, for both QlikView and Qlik Sense, to source data from Saleforce for Sales, Marketing and CSO dashboards.
 
