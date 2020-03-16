@@ -16,13 +16,13 @@ As such, we have created and posted a common set of Qlik assets as an open sourc
 
 ## Documentation
 
-Please see the [**__OSD4SF__** **documentation**](https://github.com/qlikperf/OSD4SF/raw/master/Open%20Source%20Dashboard%20for%20Salesforce%20Documentation.pdf) for step-by-step instructions for installation and configuration.
+Please see the [**__OSD4SF__** **documentation**](https://github.com/qlikperf/OSD4SF/blob/master/Open%20Source%20Dashboard%20for%20Salesforce%20Documentation.pdf) for step-by-step instructions for installation and configuration.
 
 ## Minimum Requirements:
 QlikView (v11 or 12); OR Qlik Sense 2.1 or higher (including all releases named after dates, for example, the "June 2017" and later releases).  The **__OS4DSF__** works with both Desktop and Server product variants.
 
 ## Install
-To install the **__OSD4SF__**, first download the **[Source code (zip) file for the newest release](https://github.com/qlikperf/TSEEQ/releases)**. After you download the file, please check **Unblock** in the file properties and then click **OK**.
+To install the **__OSD4SF__**, first download the **[Source code (zip) file for the newest release](https://github.com/qlikperf/OSD4SF/releases)**. After you download the file, please check **Unblock** in the file properties and then click **OK**.
 
 ![Unblock](https://github.com/qlikperf/OSD4SF/blob/master/img/unblock_zip_file.png) 
 
