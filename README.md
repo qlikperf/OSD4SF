@@ -1,7 +1,7 @@
 
 # **__OSD4SF__**: The Open Source Dashboard for Salesforce
 
-## Latest Release == [1.0.1](https://github.com/qlikperf/OSD4SF/releases/latest)
+## Latest Release == [1.0.2](https://github.com/qlikperf/OSD4SF/releases/latest)
 
 ## Description
 
