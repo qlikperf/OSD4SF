@@ -1,8 +1,0 @@
-﻿Comment,Target,Field,ENABLED
-,Products,UnitPrice,Y
-,Orders,ShipperID,Y
-,Orders,OrderDate,Y
-,Shippers,CompanyName,Y
-,OrderDetails,Discount,Y
-,Customers,Fax,Y
-,Customers,PostalCode,Y
