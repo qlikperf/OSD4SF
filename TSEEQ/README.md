@@ -1,7 +1,7 @@
 
 # **__TSEEQ__** ("seek"), The Structured ETL Engine for Qlik
 
-## Latest Release == [4.0.5](https://github.com/qlikperf/TSEEQ/releases/latest)
+## Latest Release == [4.0.9](https://github.com/qlikperf/TSEEQ/releases/latest)
 
 ## Documentation
 Please see the **__TSEEQ__** **[documentation](https://github.com/qlikperf/TSEEQ/blob/master/TSEEQ%20Documentation.pdf)** for step-by-step instructions for installation and configuration.
@@ -30,7 +30,7 @@ Primary benefits of **__TSEEQ__** are:
 * Productivity:   A common code base promotes reuse and streamlines ETL development.
 
 
-![TSEEQ](https://github.com/qlikperf/TSEEQ/blob/master/img/SEEQ_basic_flow.png) 
+![TSEEQ](https://github.com/qlikperf/TSEEQ/blob/master/img/TSEEQ%203-stage%20newer.png) 
 
 ## **__TSEEQ__** In Comparison to Traditional Embedded Scripting
 The distinguishing characteristic of **__TSEEQ__** versus Traditional Embedding Scripting (**TES**) is that in **__TSEEQ__**, externalized rules (diagram above) provides a structured source of ETL control; in **TES**, free-form textual ETL script is embedded within Qlik application files (QVWs in QlikView and QVFs in Qlik Sense). We can conceptualize **TES** as shown in the diagram below:
