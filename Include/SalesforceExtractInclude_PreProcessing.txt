@@ -1,13 +1,14 @@
 //****************************************************************************************************************
 //	This is an example of an externalized include file.
 //****************************************************************************************************************
-Trace Entering Include File: $(vApp)$(vPurpose)Include_PostProcessing.txt;
-
+Trace Entering Include File: $(vApp)$(vPurpose)Include_PreProcessing.txt;
 // Add script here as required.
+/*  In v1.0.9, Calendar creation is moved to script tab 06 within ETL QVFs: 
 $(must_Include=$(vCommonScriptPath)createcalendartable.txt); 
 LET vMinDateNum = num ( vSalesForceMinExtractDate);	// Earliest date in calendar
 LET vMaxDateNum = num (vToday);				// Most recent date in calendar
 call CreateCalendarQvd('', 'DROP');			// Create Calendar.qvd and then keep the calendar in memory. 
 trace $(vQVDPath)\Extracted\Calendar.qvd successfully stored;
+*/
 
-Trace Exiting Include File: $(vApp)$(vPurpose)Include_PostProcessing.txt;
+Trace Exiting Include File: $(vApp)$(vPurpose)Include_PreProcessing.txt;
