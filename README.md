@@ -1,7 +1,7 @@
 
 # **__OSD4SF__**: The Open Source Dashboard for Salesforce
 
-## Latest Release == [1.0.9](https://github.com/qlikperf/OSD4SF/releases/latest)
+## Latest Release == [6.0.2](https://github.com/qlikperf/OSD4SF/releases/latest)
 
 ## Description
 
@@ -19,7 +19,7 @@ As such, we have created and posted a common set of Qlik assets as an open sourc
 Please see the [**__OSD4SF__** **documentation**](https://github.com/qlikperf/OSD4SF/blob/master/Open%20Source%20Dashboard%20for%20Salesforce%20Documentation.pdf) for step-by-step instructions for installation and configuration.
 
 ## Minimum Requirements:
-QlikView (v11 or 12); OR Qlik Sense 2.1 or higher (including all releases named after dates, for example, the "June 2017" and later releases).  The **__OS4DSF__** works with both Desktop and Server product variants.
+Qlik Sense® Business, Qlik Sense® Enterprise SaaS, Qlik Sense® Enterprise Client-Managed and QlikView 
 
 ## Install
 To install the **__OSD4SF__**, first download the **[Source code (zip) file for the newest release](https://github.com/qlikperf/OSD4SF/releases)**. After you download the file, please check **Unblock** in the file properties and then click **OK**.

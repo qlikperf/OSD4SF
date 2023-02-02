@@ -1,7 +1,7 @@
 //****************************************************************************************************************
 //	This is an example of an externalized include file.
 //****************************************************************************************************************
-Trace Entering Include File: $(vApp)$(vPurpose)Include_PostProcessing.txt;
+Trace Entering Include File: $(vApp)$(vPurpose)Include_PreProcessing.txt;
 
 // Add script here as required.
 
@@ -34,4 +34,4 @@ LOAD * INLINE [
 3
 ];
 
-Trace Exiting Include File: $(vApp)$(vPurpose)Include_PostProcessing.txt;
+Trace Exiting Include File: $(vApp)$(vPurpose)Include_PreProcessing.txt;

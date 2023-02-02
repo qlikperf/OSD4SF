@@ -31,4 +31,4 @@ STORE Link INTO [$(vQVDPath)\Transformed\Link.qvd] (qvd);
 
 DROP Table Link;
 
-Trace Exiting Include File: $(vApp)$(vPurpose)Include_PosyProcessing.txt;
+Trace Exiting Include File: $(vApp)$(vPurpose)Include_PostProcessing.txt;
